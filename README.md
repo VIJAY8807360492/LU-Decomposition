@@ -9,27 +9,39 @@ To write a program to find the LU Decomposition of a matrix.
 
 ## Algorithm
 
-     1.L AND U MATRIX
+i.L AND U MATRIX
 
-(i) find the 1 and u matirx by using numpy and linalg from scipy
+1.Input the Matrix:
 
-(ii)print the 1 matrix and u matirx
+2.Take a square or rectangular matrix as input (the user provides it). The matrix should be in the form of a 2D array. Convert the input to a NumPy array using np.array(eval(input())). LU Decomposition:
 
-(iii)find the lu decomposition by using numpy and lu_factor and lu_solve
+3.Use the lu() function from scipy.linalg to perform LU decomposition of the input matrix. The lu() function decomposes the matrix into three components: piv: The permutation matrix, which represents row swaps (pivoting). l_matrix: The lower triangular matrix (with diagonal elements as 1). u_matrix: The upper triangular matrix. Output the Results:
 
-(iv)print the the following  matrix 
+4.Print the lower triangular matrix (l_matrix). 5.Print the upper triangular matrix (u_matrix).
 
-     2. LU DECOMPOSITION
+ii.LU DECOMPOSITION
 
-(i)In second program can import lo factor and lu selve from python library as same as in second program.
+1.Input the Matrix and Vector:
 
-(ii)Get the input from user in the form of nested list to compute numpy array format and declare it for both the variables
+2.Take a square matrix (matrix) as input, provided in the form of a 2D array.
 
-(iii)Create the variable to Use inputted array to compute of lu, factor of matrix varaible.
+3.Take a vector (b) as input, which represents the constants in the linear system 𝐴 𝑥
+𝑏 Ax=b.
 
-(iv)Create the new variable for a solve to compute of x variable and b' variable.
+4.LU Factorization:
 
-(v)Print the corresponding variable (solution) to get the output
+5.Use the lu_factor() function from scipy.linalg to perform LU decomposition on the matrix.
+
+6.This function decomposes the matrix into a lower triangular matrix 𝐿
+
+7.L, an upper triangular matrix 𝑈
+
+8.U, and a pivoting vector for row permutations. Solve the Linear System:
+
+9.Use the lu_solve() function to solve the linear system 𝐴 𝑥
+𝑏 Ax=b, where 𝐴 A is the input matrix, and 𝑏 b is the constant vector. lu_solve() uses the previously computed LU decomposition to find the solution vector 𝑥 x. Output the Solution:
+
+10.Print the solution vector 𝑥 x
  
 
 ## Program:
